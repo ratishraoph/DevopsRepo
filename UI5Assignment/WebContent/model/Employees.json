@@ -1,0 +1,27 @@
+{  
+  "employees":[  
+    {  
+      "EmployeeType":"Permanent",
+      "EmployeeName":"Ratish",
+      "Employer":"Accenture"
+    },
+
+    {  
+      "EmployeeType":"Permanent",
+      "EmployeeName":"Khalid",
+      "Employer":"Accenture"
+    },
+
+    {  
+      "EmployeeType":"Permanent",
+      "EmployeeName":"Shashi",
+      "Employer":"Accenture"
+    },
+
+    {  
+      "EmployeeType":"Permanent",
+      "EmployeeName":"Chandra",
+      "Employer":"Accenture"
+    }
+  ]
+}

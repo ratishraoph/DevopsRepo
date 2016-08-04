@@ -1,0 +1,81 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="ui5assignment.Table" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	
+	<Page title="Employee Master">
+		<content>
+		
+			<f:SimpleForm id="idEmployeeForm"
+				minWidth="1024"
+				maxContainerCols="2"
+				editable="true"
+				layout="ResponsiveGridLayout"
+				title="Add Employee Form"
+				labelSpanL="3"
+				labelSpanM="3"
+				emptySpanL="4"
+				emptySpanM="4"
+				columnsL="1"
+				columnsM="1">
+				<f:content>
+				<Toolbar>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://add" press="onAddEmployees"/>
+				</Toolbar>
+					<Label text="Employee Type" />
+					<Input value="" />
+					<Label text="Employee Name" />
+					<Input value=""/>
+					<Label text="Employer" />
+					<Input value=""/>
+				</f:content>
+			</f:SimpleForm>
+		
+			<Table id="idEmployeesTable"
+				items="{/employees}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Employee List" level="H2"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<Text text="Employee Type" />
+					</Column>
+					<Column>
+						<Text text="Employee Name" />
+					</Column>
+					<Column>
+						<Text text="Employer" />
+					</Column>
+					<Column
+						hAlign="Right">
+						<Text text="" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text
+								text="{EmployeeType}"/>
+							<Text
+								text="{EmployeeName}" />
+							<Text
+								text="{Employer}" />
+							<Button
+								visible="true"
+								text=""
+								type="Default"
+								enabled="true"
+								icon="sap-icon://delete"
+								iconFirst="true"
+								iconDensityAware="true"
+								press="onDeleteEmployees"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</core:View>
